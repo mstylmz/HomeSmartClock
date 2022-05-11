@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="100dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@color/color_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_48ssp"
+            android:layout_height="@dimen/_48ssp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/clock_plus_outline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <EditText
+            android:id="@+id/editTextTextClockName"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="@string/clock_name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSaveClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/save"
+            style="@style/MyCustomButton"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextClockID"
+            app:layout_constraintStart_toStartOf="@+id/editTextClockID"
+            app:layout_constraintTop_toBottomOf="@+id/editTextClockID" />
+
+        <EditText
+            android:id="@+id/editTextClockID"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="@string/clock_id"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextClockName"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextClockName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextClockName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

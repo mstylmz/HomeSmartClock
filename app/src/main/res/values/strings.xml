@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">HomeSmartClock</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="home_fragment_label">Home</string>
+    <string name="clock_detail_fragment_label">Clock Detail</string>
+    <string name="setting_fragment_label">Setting</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
+    <!-- Strings used for mqtt -->
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="Send">Send</string>
+
+
+    <string name="add_clock">Add Clock</string>
+    <string name="new_clock_add">Click button to add clock</string>
+    <string name="clock_name">Clock name</string>
+    <string name="save">Save</string>
+    <string name="clock_id">Identity</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="clock_name_empty_warning">Please enter a clock name</string>
+    <string name="clock_id_empty_warning">Please enter a clock identity</string>
+    <string name="already_registered">This watch is already registered!</string>
+    <string name="clock_failed_connect">Failed to connect with device</string>
+
+
+    <string name="hint_message">Message</string>
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+
+</resources>

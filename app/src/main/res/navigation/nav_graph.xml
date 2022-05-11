@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ClockListFragment">
+
+    <fragment
+        android:id="@+id/ClockListFragment"
+        android:name="com.yilmaz.homesmartclock.ui.clocks.list.ClockListFragment"
+        android:label="@string/home_fragment_label"
+        tools:layout="@layout/fragment_clock_list">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/ClockDetailFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/ClockDetailFragment"
+        android:name="com.yilmaz.homesmartclock.ui.clocks.detail.ClockDetailFragment"
+        android:label="@string/clock_detail_fragment_label"
+        tools:layout="@layout/fragment_clock_detail">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/ClockListFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <argument
+            android:name="clock"
+            app:argType="com.yilmaz.homesmartclock.model.Clock"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_ClockDetailFragment_to_settingFragment"
+            app:destination="@id/settingFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.yilmaz.homesmartclock.ui.clocks.setting.SettingFragment"
+        android:label="@string/setting_fragment_label">
+        <action
+            android:id="@+id/action_settingFragment_to_ClockDetailFragment"
+            app:destination="@id/ClockDetailFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <argument
+            android:name="clock"
+            app:argType="com.yilmaz.homesmartclock.model.Clock"
+            app:nullable="true" />
+    </fragment>
+</navigation>
